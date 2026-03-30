@@ -16,8 +16,31 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "CloudNote",
-  description: "당신의 아이디어를 클라우드에",
+  metadataBase: new URL('https://saas-note-six.vercel.app'),
+  title: "CloudNote - AI 메모 서비스",
+  description: "어디서든 메모하고, AI가 정리해드립니다. 30일 무료 Pro 체험.",
+  openGraph: {
+    title: "CloudNote - AI 메모 서비스",
+    description: "어디서든 메모하고, AI가 정리해드립니다. 30일 무료 Pro 체험.",
+    url: "https://saas-note-six.vercel.app",
+    siteName: "CloudNote",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "CloudNote OG Image",
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CloudNote - AI 메모 서비스",
+    description: "어디서든 메모하고, AI가 정리해드립니다. 30일 무료 Pro 체험.",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
